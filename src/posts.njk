@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: posts
+description: "Everything I've written, grouped by year."
+permalink: /posts/
+---
+<header class="section-header">
+  <h1 class="section-header__title"><span aria-hidden="true">#</span> posts</h1>
+  <p class="section-header__sub">
+    Everything I've written, grouped by year. There is also an
+    <a href="/feed.xml">RSS feed</a>.
+  </p>
+</header>
+
+{% for group in collections.postsByYear %}
+<section class="year">
+  <h2 class="year__label">{{ group.year }}</h2>
+  <ul class="post-list">
+    {% for post in group.items %}
+    <li class="post-list__item">
+      <time class="post-list__date" datetime="{{ post.date | machineDate }}">{{ post.date | readableDate }}</time>
+      <a class="post-list__link" href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% else %}
+<p class="post-list__empty">No posts yet. Soon&trade;.</p>
+{% endfor %}

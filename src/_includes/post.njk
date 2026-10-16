@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+<article class="post h-entry">
+  <header class="post__header">
+    <h1 class="post__title p-name">{{ title }}</h1>
+    <p class="post__meta">
+      <time class="dt-published" datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
+      <span aria-hidden="true">·</span> {{ content | readingTime }}
+      {% if tags %}{% for tag in tags %}{% if tag != "posts" %}<span aria-hidden="true">·</span> <a class="tag" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>{% endif %}{% endfor %}{% endif %}
+    </p>
+    {% if summary %}<p class="post__summary">{{ summary }}</p>{% endif %}
+  </header>
+
+  <div class="prose e-content">
+    {{ content | safe }}
+  </div>
+
+  <nav class="post__nav" aria-label="Post navigation">
+    {% set newer = collections.posts | adjacentPost(page.url, -1) %}
+    {% set older = collections.posts | adjacentPost(page.url, 1) %}
+    {% if newer %}<a class="post__nav-link post__nav-link--prev" href="{{ newer.url }}"><span aria-hidden="true">←</span> {{ newer.data.title }}</a>{% endif %}
+    {% if older %}<a class="post__nav-link post__nav-link--next" href="{{ older.url }}">{{ older.data.title }} <span aria-hidden="true">→</span></a>{% endif %}
+  </nav>
+</article>

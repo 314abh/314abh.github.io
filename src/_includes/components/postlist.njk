@@ -1,0 +1,10 @@
+<ul class="post-list">
+  {% for post in posts %}
+  <li class="post-list__item">
+    <time class="post-list__date" datetime="{{ post.date | machineDate }}">{{ post.date | readableDate }}</time>
+    <a class="post-list__link" href="{{ post.url }}">{{ post.data.title }}</a>
+  </li>
+  {% else %}
+  <li class="post-list__empty">Nothing here yet. Soon&trade;.</li>
+  {% endfor %}
+</ul>

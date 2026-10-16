@@ -1,0 +1,17 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: "posts tagged #{{ tag }}"
+---
+<header class="section-header">
+  <h1 class="section-header__title"><span aria-hidden="true">#</span> {{ tag }}</h1>
+  <p class="section-header__sub"><a href="/posts/">← all posts</a></p>
+</header>
+
+{% set posts = collections.posts | byTag(tag) %}
+{% include "components/postlist.njk" %}

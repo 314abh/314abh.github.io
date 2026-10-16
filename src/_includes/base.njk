@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "components/head.njk" %}
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="frame">
+    {% include "components/header.njk" %}
+
+    <main id="main" class="content">
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var button = document.querySelector("[data-theme-toggle]");
+      var label = button && button.querySelector("[data-theme-label]");
+      if (!button || !label) return;
+
+      function apply(theme) {
+        root.setAttribute("data-theme", theme);
+        label.textContent = theme;
+        button.setAttribute("aria-pressed", String(theme === "dark"));
+      }
+
+      button.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        apply(next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+
+      apply(root.getAttribute("data-theme") || "light");
+    })();
+  </script>
+</body>
+</html>

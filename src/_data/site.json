@@ -1,0 +1,26 @@
+{
+  "title": "314abh",
+  "tagline": "notes from down at the metal.",
+  "description": "A personal blog about low-level programming, systems, and the occasional tangent.",
+  "url": "https://314abh.cc",
+  "lang": "en",
+  "author": {
+    "name": "314abh",
+    "email": "hello@314abh.cc"
+  },
+  "nav": [
+    { "label": "posts", "url": "/posts/" },
+    { "label": "about", "url": "/about/" },
+    { "label": "links", "url": "/links/" },
+    { "label": "now", "url": "/now/" }
+  ],
+  "social": [
+    { "label": "github", "url": "https://github.com/314abh" },
+    { "label": "rss", "url": "/feed.xml" },
+    { "label": "email", "url": "mailto:hello@314abh.cc" }
+  ],
+  "webring": {
+    "name": "the null webring",
+    "home": "/links/"
+  }
+}
