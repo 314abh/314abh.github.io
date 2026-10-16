@@ -1,12 +1,12 @@
 {
   "title": "314abh",
-  "tagline": "notes from down at the metal.",
-  "description": "A personal blog about low-level programming, systems, and the occasional tangent.",
+  "tagline": "If I haven't written in a week, sorry I was trying to survive.",
+  "description": "Personal blog of a cat programmer stuck in a human body.",
   "url": "https://314abh.cc",
   "lang": "en",
   "author": {
-    "name": "314abh",
-    "email": "hello@314abh.cc"
+    "name": "Abhigyan Kumar",
+    "email": "314abh@gmail.com"
   },
   "nav": [
     { "label": "posts", "url": "/posts/" },
@@ -20,7 +20,7 @@
     { "label": "email", "url": "mailto:hello@314abh.cc" }
   ],
   "webring": {
-    "name": "the null webring",
+    "name": "the neumann webring",
     "home": "/links/"
   }
 }
