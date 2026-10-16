@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 31" width="88" height="31" role="img" aria-label="The Null Webring">
+  <rect width="88" height="31" fill="#b16286"/>
+  <rect x="0.5" y="0.5" width="87" height="30" fill="none" stroke="#282828" stroke-width="1"/>
+  <rect x="3" y="3" width="82" height="25" fill="none" stroke="#fbf1c7" stroke-width="1"/>
+  <text x="44" y="14" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#fbf1c7">THE NULL</text>
+  <text x="44" y="25" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#fbf1c7">WEBRING</text>
+</svg>

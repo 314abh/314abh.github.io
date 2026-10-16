@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: "314abh"
+permalink: /
+---
+<section class="hero">
+  <p class="hero__lede">
+    <span class="prompt" aria-hidden="true">~$</span> whoami
+  </p>
+  <h1 class="hero__title">low-level software engineer.</h1>
+  <p class="hero__blurb">
+    I write about kernels, compilers, embedded systems, and the sharp edges of the
+    tooling we all lean on. Mostly notes to my future self &mdash; published in case
+    they help you, too.
+  </p>
+  <p class="hero__meta">
+    Find me on
+    {% for item in site.social %}<a href="{{ item.url }}">{{ item.label }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.
+  </p>
+</section>
+
+<section class="home-posts">
+  <h2 class="section-title"><span aria-hidden="true">#</span> recent posts</h2>
+  {% set posts = collections.posts | limit(6) %}
+  {% include "components/postlist.njk" %}
+  <p class="more"><a href="/posts/">read everything <span aria-hidden="true">→</span></a></p>
+</section>

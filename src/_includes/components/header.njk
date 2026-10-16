@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="site-header__top">
+    <a class="site-title" href="/">{{ site.title }}<span class="cursor" aria-hidden="true">_</span></a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span aria-hidden="true">[</span><span data-theme-label>auto</span><span aria-hidden="true">]</span>
+    </button>
+  </div>
+  <p class="site-tagline">{{ site.tagline }}</p>
+  <nav class="site-nav" aria-label="Primary">
+    {% for item in site.nav %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+  </nav>
+</header>
