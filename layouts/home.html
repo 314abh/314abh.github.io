@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<section class="introduction">
+    {{ .Content }}
+</section>
+
+
+<ul class="post-list">
+
+    {{ $posts := where site.RegularPages "Section" "posts" }}
+    {{ $posts = $posts.ByDate.Reverse }}
+
+    {{ range first 3 $posts }}
+
+        {{ partial "post-item.html" . }}
+
+    {{ else }}
+
+        <p>No posts published yet.</p>
+
+    {{ end }}
+
+</ul>
+
+{{ end }}
+

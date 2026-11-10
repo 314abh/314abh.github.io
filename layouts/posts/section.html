@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<section class="posts-page">
+
+    <h1>Posts</h1>
+
+    <p id="post-results" aria-live="polite"></p>
+
+
+    <ul
+        id="post-list"
+        class="post-list"
+        data-page-size="20"
+    >
+
+        {{ $posts := where site.RegularPages "Section" "posts" }}
+        {{ $posts = $posts.ByDate.Reverse }}
+
+        {{ range $posts }}
+            {{ partial "post-item.html" . }}
+        {{ end }}
+
+    </ul>
+
+</section>
+
+<script src="{{ "js/post-filter.js" | relURL }}" defer></script>
+
+{{ end }}

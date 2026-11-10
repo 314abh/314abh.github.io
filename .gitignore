@@ -3,3 +3,5 @@ _site/
 .eleventy-cache/
 .DS_Store
 *.log
+public/
+

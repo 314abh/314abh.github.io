@@ -1,0 +1,96 @@
+:root {
+	--grey-text: #2d3436;
+	--link-color: #ff746c;
+}
+
+body {
+	max-width: 680px;
+	margin: clamp(12px, 3svh, 28px) auto;
+	padding: 0 24px;
+	font-family: 'Switzer', sans-serif;
+	font-size: clamp(13px, 1.95svh, 16px);
+	line-height: 1.4;
+	color: black;
+	background: white;
+}
+
+blockquote {
+	color: var(--grey-text);
+}
+
+ul.post-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	row-gap: 0.5rem;
+}
+
+ul.post-list li {
+	display: grid;
+    grid-template-columns: 10rem minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: baseline;
+	margin-bottom: 0.25rem;
+}
+
+ul.post-list li time,
+header time {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+	font-style: italic;
+	color: var(--grey-text);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.site-header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .site-header nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+a {
+	border-bottom: 0.15rem solid var(--link-color);
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	border-bottom: 0.1rem solid var(--link-color);
+	text-decoration: none;
+	color: black;
+}
+
+a:hover, a:focus-visible {
+	background-color: var(--link-color);
+	text-decoration: none;
+	color: white;
+}
+
+.post-tags {
+	text-transform: lowercase;
+	color: var(--grey-text);
+}
+
