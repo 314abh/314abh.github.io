@@ -1,0 +1,25 @@
+<header class="site-header">
+
+	<span>
+		<a class="site-title" href="{{ site.Home.RelPermalink }}">
+			<strong>{{ site.Title }}</strong>
+		</a>
+		{{ if and .IsPage (eq .Section "posts") }}
+			<strong> : : </strong> {{ .Title }}
+		{{ end }}
+	</span>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            {{ range site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
+
+</header>
+

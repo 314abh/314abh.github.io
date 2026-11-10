@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ hugo.Generator }}
+
+    <title>
+        {{- if .IsHome -}}
+            {{ site.Title }}
+        {{- else -}}
+            {{ .Title }} : : {{ site.Title }}
+        {{- end -}}
+    </title>
+
+    {{ $description := or .Description site.Params.description }}
+    <meta name="description" content="{{ $description }}">
+
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+	<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,401,700,701&f[]=gambetta@400,401,700,701&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	{{ partial "site-nav.html" . }}
+
+    <main id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+	<hr/>
+
+    <footer class="site-footer">
+        <p align="center">
+            &copy; {{ now.Year }} {{ site.Params.author }}
+        </p>
+    </footer>
+
+</body>
+</html>

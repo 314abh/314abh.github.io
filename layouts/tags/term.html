@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<section class="tag-page">
+
+    <h1>{{ .Title }}</h1>
+
+    <ul class="post-list">
+
+        {{ $posts := .Pages.ByDate.Reverse }}
+        {{ $paginator := .Paginate $posts }}
+
+        {{ range $paginator.Pages }}
+
+            {{ partial "post-item.html" . }}
+
+        {{ else }}
+
+            <p>No posts found.</p>
+
+        {{ end }}
+
+    </ul>
+
+    {{ partial "pagination.html" . }}
+
+</section>
+
+{{ end }}
+

@@ -1,0 +1,28 @@
+baseURL = 'https://314abh.cc/'
+locale = 'en-US'
+languageCode = 'en-IN'
+title = "abh"
+
+[params]
+description = "Personal site and blog of."
+author = "Abhigyan Kumar"
+
+[menus]
+	[[menus.main]]
+		name = "Posts"
+		pageRef = "/posts"
+		weight = 10
+
+	[[menus.main]]
+		name = "Projects"
+		url = "https://codeberg.org/314abh"
+		weight = 20
+	[[menus.main]]
+		name = "Twitter"
+		url = "https://x.com/vegrolled"
+		weight = 30
+	[[menus.main]]
+		name = "Email"
+		url = "mailto:314abh+dot@gmail.com"
+		weight = 40
+
