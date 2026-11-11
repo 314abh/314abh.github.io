@@ -4,7 +4,7 @@ languageCode = 'en-IN'
 title = "abh"
 
 [params]
-description = "Personal site and blog of."
+description = "personal site : : blog"
 author = "Abhigyan Kumar"
 
 [menus]
