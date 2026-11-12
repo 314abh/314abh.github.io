@@ -1,6 +1,5 @@
 baseURL = 'https://314abh.cc/'
-locale = 'en-US'
-languageCode = 'en-IN'
+locale = 'en-in'
 title = "abh"
 
 [params]
