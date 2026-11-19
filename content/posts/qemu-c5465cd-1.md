@@ -1,6 +1,6 @@
 +++
 date = "2026-11-15T11:11:03+05:30"
-draft = true
+draft = false
 title = "qemu / c5465cd (part 1)"
 description = "An explanation of my work on my patch c5465cd to qemu."
 +++

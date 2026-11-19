@@ -1,6 +1,6 @@
 +++
 date = "2026-11-15T11:11:03+05:30"
-draft = true
+draft = false
 title = "qpdudusydi's Rust Crackme (XOR)"
 description = "Writeup on the Rust (XOR) Crackme problem."
 tags = ["writeup", "hacks"]
@@ -23,7 +23,7 @@ We see that the program has hard-coded strings:
   * “Crackme Rust (XOR)”
   * “Put in your answer:”
   * “Wrong!”
-  
+
 The first two strings make it easy for us to identify the entry-point
 of the program. The last one also makes it easy for us to find the
 conditional branch that is breaking us away from the “Correct!”
@@ -35,7 +35,7 @@ locations of the strings.
   * “Wrong!” is stored in memory at `0x14001df10`
   * “Correct!” is stored in memory at `0x14001df17`
   * “Put in your answer:” is stored in memory at `0x14001dec7`
-  
+
 Using the XREFs for each of the strings, we find the entry point of
 the program. The de-compiler helped me see the code for the
 entry-point function. It was `0x140002f20`.
