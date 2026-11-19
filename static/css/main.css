@@ -79,6 +79,12 @@ header time {
     }
 }
 
+.webring-home,
+.webring-home:hover {
+	text-decoration: none;
+	border: none;
+}
+
 a {
 	border-bottom: 0.15rem solid var(--link-color);
 	text-decoration: none;
@@ -100,5 +106,11 @@ a:hover, a:focus-visible {
 .post-tags {
 	text-transform: lowercase;
 	color: var(--grey-text);
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
